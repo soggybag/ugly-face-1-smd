@@ -55,8 +55,8 @@ Use a current-limited supply, or 9 V through a 100 Ω resistor (each 1 mA shows 
 
 | Point | Expected | Seen |
 |---|---|---|
-| U1 pin 5 (AMP_OUT) | clipped square, ~7–8 Vpp around ~4.5 V (note the symmetry) | |
-| U2 pin 4 (RESET) | the same square, AC-coupled, centred on the THRESHOLD bias | |
+| U1 pin 5 (AMP_OUT) | clipped square, ~7–8 Vpp around ~4.5 V (note the symmetry) |  |
+| U2 pin 4 (RESET) | the same square, AC-coupled, centered on the THRESHOLD bias |  |
 | U2 pins 2/6 (TIMING) | exponential ramps 3 ↔ 6 V; restarting from 0 V each time the gate opens (sync) | |
 | U2 pin 7 / OUT | 555 square bursts, gated per guitar cycle | |
 | FREQUENCY min / max (gate held open, no LDR light) | ~72 Hz / several kHz (record the actual values) | 125 Hz to 16.7 kHz |
