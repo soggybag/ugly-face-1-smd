@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "Ugly Face 1 - SMD")
-		(date "2026-09-24")
-		(rev "1.1")
+		(date "2026-10-02")
+		(rev "1.2")
 		(comment 1 "Converted from Eagle UglyFace_01 (LM386 + 7555) for JLCPCB SMD assembly")
 		(comment 2 "Enclosure: Hammond 1590B")
 	)
@@ -1275,6 +1275,219 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Potentiometer_Trim"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "RV"
+				(at -4.445 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R_Potentiometer_Trim"
+				(at -2.54 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Trim-potentiometer"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "R"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "POT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=r0 2=wiper 3=r1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "resistor variable trimpot trimmer"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Potentiometer*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_Potentiometer_Trim_0_1"
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 0.762) (xy 1.524 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Potentiometer_Trim_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Diode:SS14"
 			(pin_numbers
 				(hide yes)
@@ -1748,6 +1961,196 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_SPDT"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2667,7 +3070,7 @@
 	)
 	(rectangle
 		(start 337.82 20.32)
-		(end 408.94 119.38)
+		(end 403.86 119.38)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -2735,9 +3138,9 @@
 		)
 		(uuid "2d7aae5f-b31a-4421-848b-010f3bf2b095")
 	)
-	(text "THRESHOLD"
+	(text "THRESHOLD = \nSW1 toggle: \nGATED (R8) / \nGLITCH (centre, RV2 trim) / \nON (R7)"
 		(exclude_from_sim no)
-		(at 304.8 68.58 0)
+		(at 261.62 73.66 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -2768,6 +3171,17 @@
 			(justify left bottom)
 		)
 		(uuid "59ef1be5-54b1-4ba3-9b99-fa2ed837e7d0")
+	)
+	(text "R9: 22k into RESET limits current from the gate swing \n(TLC555 pin 4 was being driven to -0.75 V)."
+		(exclude_from_sim no)
+		(at 285.75 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e522f9e-ab3d-47f0-a85b-0dc476fd3584")
 	)
 	(text "POWER"
 		(exclude_from_sim no)
@@ -2818,7 +3232,7 @@
 	)
 	(text "ENVELOPE"
 		(exclude_from_sim no)
-		(at 269.24 55.88 0)
+		(at 276.86 46.99 0)
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -3003,6 +3417,12 @@
 		(color 0 0 0 0)
 		(uuid "e267936e-93a0-4abe-acea-4bc2718cbc57")
 	)
+	(junction
+		(at 285.75 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "efa7dc8d-bcb6-4827-884c-2a21565d3ff3")
+	)
 	(wire
 		(pts
 			(xy 106.68 179.07) (xy 101.6 179.07)
@@ -3022,6 +3442,16 @@
 			(type default)
 		)
 		(uuid "03a8d57b-77d8-46ac-a67a-ad076d520ba4")
+	)
+	(wire
+		(pts
+			(xy 275.59 96.52) (xy 270.51 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03f6abbc-5060-46f4-b462-5c2f9468c0bd")
 	)
 	(wire
 		(pts
@@ -3082,6 +3512,26 @@
 			(type default)
 		)
 		(uuid "0cdf63ef-0b7b-4df5-af9f-8b06f0b04d8a")
+	)
+	(wire
+		(pts
+			(xy 289.56 88.9) (xy 289.56 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d933974-d530-4be5-8b96-25c3e4e64e4f")
+	)
+	(wire
+		(pts
+			(xy 283.21 81.28) (xy 285.75 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de1b556-dbc1-4bb4-8f6c-af51d7c9d2ef")
 	)
 	(wire
 		(pts
@@ -3175,6 +3625,16 @@
 	)
 	(wire
 		(pts
+			(xy 285.75 81.28) (xy 289.56 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3644d3a6-ef96-415b-9a00-0ca00ce681a0")
+	)
+	(wire
+		(pts
 			(xy 53.34 35.56) (xy 66.04 35.56)
 		)
 		(stroke
@@ -3195,13 +3655,13 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 81.28) (xy 289.56 88.9)
+			(xy 248.92 167.64) (xy 250.19 167.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3e499be6-075e-4567-844a-d0ffc1fe92b0")
+		(uuid "416456e2-5292-4a59-b091-2301a8bff0bc")
 	)
 	(wire
 		(pts
@@ -3215,13 +3675,13 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 167.64) (xy 260.35 167.64)
+			(xy 285.75 99.06) (xy 285.75 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4dc1c380-a21b-4534-a542-94f5b503ce07")
+		(uuid "497c2971-b7d3-4064-bdab-83923d6c0dfa")
 	)
 	(wire
 		(pts
@@ -3235,6 +3695,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.81 167.64) (xy 260.35 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54488ac7-0be7-4246-914e-91036cdca401")
+	)
+	(wire
+		(pts
 			(xy 101.6 179.07) (xy 101.6 181.61)
 		)
 		(stroke
@@ -3242,16 +3712,6 @@
 			(type default)
 		)
 		(uuid "58066642-00f3-493e-9e84-fca093b76d94")
-	)
-	(wire
-		(pts
-			(xy 283.21 81.28) (xy 289.56 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5eedee09-5f69-4392-99cd-430a6d40bb08")
 	)
 	(wire
 		(pts
@@ -3482,6 +3942,16 @@
 			(type default)
 		)
 		(uuid "9666ac79-4743-4040-b766-b99fce458b7e")
+	)
+	(wire
+		(pts
+			(xy 275.59 101.6) (xy 270.51 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bf8f381-191c-4d1b-8831-2935adca106d")
 	)
 	(wire
 		(pts
@@ -3793,6 +4263,16 @@
 		)
 		(uuid "6d91a6cf-9ac2-49b0-9d38-6dcd3342b6fb")
 	)
+	(label "RESET"
+		(at 289.56 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70dc2bd0-a5b5-4edd-a87e-c6a82b90344c")
+	)
 	(label "TIMING"
 		(at 35.56 184.15 0)
 		(effects
@@ -3892,16 +4372,6 @@
 			(justify right bottom)
 		)
 		(uuid "de5dec22-a52e-4f7d-b7c2-41b750554137")
-	)
-	(label "RESET"
-		(at 289.56 88.9 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e1a4b67c-b959-4788-b0b5-69f414c09e04")
 	)
 	(label "DISCH"
 		(at 35.56 161.29 0)
@@ -4207,7 +4677,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "154fbc0b-76ec-4217-8f0b-a64b35183206")
 		(property "Reference" "J6"
@@ -4444,7 +4914,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 279.4 35.56 90)
 		(unit 1)
 		(body_style 1)
@@ -4464,7 +4934,7 @@
 				)
 			)
 		)
-		(property "Value" "100u"
+		(property "Value" "22u"
 			(at 279.4 32.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4474,7 +4944,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 279.4 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -4496,7 +4966,7 @@
 				)
 			)
 		)
-		(property "Description" "Envelope coupling, 100uF 25V electrolytic"
+		(property "Description" "Envelope coupling 22u 25V X5R 1206 (was 100u electrolytic; ~16 Hz into ENV 1k even with DC-bias derating)"
 			(at 279.4 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -4507,18 +4977,7 @@
 				)
 			)
 		)
-		(property "FT Rotation Offset" "180"
-			(at 279.4 35.56 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C970685"
+		(property "LCSC" "C12891"
 			(at 279.4 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -4539,6 +4998,98 @@
 			(project "UglyFace_01"
 				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 270.51 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2762d257-5825-447f-8e56-1cdb64f7c2c8")
+		(property "Reference" "R7"
+			(at 267.97 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k2"
+			(at 267.97 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 270.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Toggle ON: pulls the RESET bias up (~5.5 V): 555 always running"
+			(at 270.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17520"
+			(at 270.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "30b8de21-6f1f-465c-b0d3-4f18d9e9f076")
+		)
+		(pin "2"
+			(uuid "06b349d4-cc0d-498a-a6f7-14e4e7c12e3d")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -5432,7 +5983,7 @@
 				)
 			)
 		)
-		(property "Description" "Threshold bottom"
+		(property "Description" "GLITCH divider bottom"
 			(at 297.18 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -5464,6 +6015,188 @@
 			(project "UglyFace_01"
 				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 270.51 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4253236c-8d16-4c2a-8a7f-927da8c89a7d")
+		(property "Reference" "R8"
+			(at 267.97 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k"
+			(at 267.97 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 270.51 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Toggle GATED: pulls the RESET bias down (~0.25 V): 555 only on positive swings"
+			(at 270.51 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 270.51 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d71c2f2c-7235-4010-90e7-f1567d24c406")
+		)
+		(pin "2"
+			(uuid "4aa2bc5b-2359-42cd-ae96-0df62cac7ac7")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 254 167.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "42d7ac3d-4ae7-4c6c-970f-2600430f8d3f")
+		(property "Reference" "R10"
+			(at 254 162.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 254 164.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 254 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "CMOS protection: isolates U2 DISCH from the output jack (ESD / plugging transients)"
+			(at 254 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 254 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dee4ab73-90a0-4056-abea-94fc13407064")
+		)
+		(pin "2"
+			(uuid "bb086943-84a1-42e1-ba2a-de4c21ae92c9")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5947,14 +6680,183 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 297.18 81.28 180)
+		(lib_id "power:GND")
+		(at 270.51 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
+		(dnp no)
+		(uuid "4fa8ce04-89c4-4311-94e0-2f6620f91bda")
+		(property "Reference" "#PWR29"
+			(at 270.51 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 270.51 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 270.51 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f328fcc7-7c3a-44f5-88aa-014f01dc2171")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "#PWR29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 289.56 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4fcb9479-bbac-4186-b64e-aa2f29c0b2d0")
+		(property "Reference" "R9"
+			(at 292.1 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22k"
+			(at 292.1 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 289.56 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "CMOS protection: limits current into U2 RESET (pin 4) when the gate signal swings below GND"
+			(at 289.56 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17560"
+			(at 289.56 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91b69f43-0671-435e-b406-70855d2641ad")
+		)
+		(pin "2"
+			(uuid "5c9c706c-9872-4fe5-8f52-71827d7ee8fc")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer_Trim")
+		(at 297.18 81.28 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "5060cdfb-2825-4e96-b0f3-eea537c7a9ac")
 		(property "Reference" "RV2"
@@ -5968,7 +6870,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "B10k"
+		(property "Value" "10k"
 			(at 301.625 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5979,7 +6881,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "UglyFace:Potentiometer_Alpha_16mm_Vertical"
+		(property "Footprint" "UglyFace:Potentiometer_Bourns_3362P_Vertical"
 			(at 297.18 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -6001,7 +6903,7 @@
 				)
 			)
 		)
-		(property "Description" "THRESHOLD pot, Alpha 16mm, hand-soldered"
+		(property "Description" "GLITCH trim: sets the RESET bias at the 555 reset threshold for the toggle centre position (3362P, hand-soldered)"
 			(at 297.18 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -6012,7 +6914,7 @@
 				)
 			)
 		)
-		(property "Label" "THR"
+		(property "Label" "GLITCH"
 			(at 301.625 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -6048,6 +6950,101 @@
 			(project "UglyFace_01"
 				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
 					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPDT")
+		(at 280.67 99.06 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "51fe4225-5da4-4f7c-b433-836aa70afd95")
+		(property "Reference" "SW1"
+			(at 276.86 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "THR"
+			(at 276.86 109.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "UglyFace:SW_Taiway_100_SPDT_PC"
+			(at 280.67 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 280.67 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "THRESHOLD toggle, Taiway 100 mini SPDT ON-OFF-ON: GATED / GLITCH (centre, RV2 trim) / ON. Back side, hand-soldered"
+			(at 280.67 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Label" "THR"
+			(at 280.67 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "086d5e4e-0c14-4b39-97ba-09e8e28e4a12")
+		)
+		(pin "2"
+			(uuid "459e3cad-d975-4cc8-a5f1-578459020c8b")
+		)
+		(pin "3"
+			(uuid "0bae96fd-d0d3-4b08-b709-0d698bae80be")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -6153,7 +7150,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "53968674-f1bb-4c00-b23a-430c1ac0e103")
 		(property "Reference" "J4"
@@ -6242,9 +7239,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "5d23f7fe-8e05-4def-a753-ee583a06e796")
 		(property "Reference" "RV1"
@@ -6315,8 +7312,7 @@
 			)
 		)
 		(property "Panel" "ENVELOPE"
-			(at 299.72 45.72 0)
-			(hide yes)
+			(at 307.34 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6428,7 +7424,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "630772ab-0f3f-4f33-b18e-a5b34f000a64")
 		(property "Reference" "J3"
@@ -6669,7 +7665,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "74b3121c-bf0e-4cf6-8a86-c1c747c848db")
 		(property "Reference" "J3"
@@ -6938,9 +7934,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "82a70a59-0b4a-44a4-8db4-8f82eda95c5e")
 		(property "Reference" "RV3"
@@ -7011,8 +8007,7 @@
 			)
 		)
 		(property "Panel" "FREQUENCY"
-			(at 35.56 167.64 0)
-			(hide yes)
+			(at 44.45 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7535,9 +8530,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "a417daa5-5d81-459e-b3d7-576bda4ea2b2")
 		(property "Reference" "D2"
@@ -7693,6 +8688,83 @@
 			(project "UglyFace_01"
 				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+9V")
+		(at 270.51 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "af486e6b-2920-48ef-b1f2-ce8e8f9b0327")
+		(property "Reference" "#PWR28"
+			(at 270.51 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+9V"
+			(at 270.51 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.51 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.51 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 270.51 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2c25800-4ae8-43f4-b99a-d8403d7eaaec")
+		)
+		(instances
+			(project "UglyFace_01"
+				(path "/e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
+					(reference "#PWR28")
 					(unit 1)
 				)
 			)
@@ -7873,7 +8945,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "bcabb7b0-0b1f-4d02-a927-cec2e1c10a5f")
 		(property "Reference" "J1"
@@ -8128,9 +9200,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "c23ebdec-1480-46a6-8071-d5a540730957")
 		(property "Reference" "U3"
@@ -8291,9 +9363,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "c48ef007-7398-49c3-990e-249b37935187")
 		(property "Reference" "RV4"
@@ -8364,8 +9436,7 @@
 			)
 		)
 		(property "Panel" "VOLUME"
-			(at 289.56 175.26 0)
-			(hide yes)
+			(at 295.91 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8803,7 +9874,7 @@
 				)
 			)
 		)
-		(property "Description" "Threshold top"
+		(property "Description" "GLITCH divider top"
 			(at 297.18 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8848,7 +9919,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "f3a3d4fb-eaa6-4f34-9be7-2e87fcc4dcef")
 		(property "Reference" "J3"
@@ -9012,7 +10083,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "f9ca324e-7c64-4ecf-9a4f-8a7f92d5b9f7")
 		(property "Reference" "J3"
@@ -9099,7 +10170,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "ff548985-7f4e-46c8-9844-e13a42b81a95")
 		(property "Reference" "J2"

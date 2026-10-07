@@ -8,7 +8,7 @@ fp-info-cache
 \#auto_saved_files#
 
 # Generated fabrication outputs (attach the JLC zip to a GitHub Release instead)
-production/
+/production/
 
 # macOS
 .DS_Store

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.0mm" height="132.0mm" viewBox="-40.0 -66.0 80.0 132.0" font-family="Helvetica">
+<rect x="-30.0" y="-56.0" width="60.0" height="112.0" rx="4" fill="none" stroke="black" stroke-width="0.3"/>
+<text x="-30.0" y="-59.0" font-size="3">Ugly Face 1 v1.2 — 1590B side A, outside view, 1:1 (footswitch not included)</text>
+<line x1="-3" y1="0" x2="3" y2="0" stroke="#999" stroke-width="0.15"/><line x1="0" y1="-3" x2="0" y2="3" stroke="#999" stroke-width="0.15"/>
+<circle cx="-14.29" cy="-36.22" r="3.75" fill="none" stroke="black" stroke-width="0.25"/><line x1="-15.29" y1="-36.22" x2="-13.29" y2="-36.22" stroke="red" stroke-width="0.15"/><line x1="-14.29" y1="-37.22" x2="-14.29" y2="-35.22" stroke="red" stroke-width="0.15"/>
+<text x="-14.29" y="-29.47" font-size="2.2" text-anchor="middle">VOL Ø7.5</text>
+<circle cx="14.29" cy="-36.22" r="3.75" fill="none" stroke="black" stroke-width="0.25"/><line x1="13.29" y1="-36.22" x2="15.29" y2="-36.22" stroke="red" stroke-width="0.15"/><line x1="14.29" y1="-37.22" x2="14.29" y2="-35.22" stroke="red" stroke-width="0.15"/>
+<text x="14.29" y="-29.47" font-size="2.2" text-anchor="middle">FRQ Ø7.5</text>
+<circle cx="0.0" cy="-20.34" r="1.6" fill="none" stroke="black" stroke-width="0.25"/><line x1="-1.0" y1="-20.34" x2="1.0" y2="-20.34" stroke="red" stroke-width="0.15"/><line x1="0.0" y1="-21.34" x2="0.0" y2="-19.34" stroke="red" stroke-width="0.15"/>
+<text x="0.0" y="-15.739999999999998" font-size="2.2" text-anchor="middle">LED Ø3.2</text>
+<circle cx="-14.29" cy="-10.82" r="3.75" fill="none" stroke="black" stroke-width="0.25"/><line x1="-15.29" y1="-10.82" x2="-13.29" y2="-10.82" stroke="red" stroke-width="0.15"/><line x1="-14.29" y1="-11.82" x2="-14.29" y2="-9.82" stroke="red" stroke-width="0.15"/>
+<text x="-14.29" y="-4.07" font-size="2.2" text-anchor="middle">ENV Ø7.5</text>
+<circle cx="14.29" cy="-10.82" r="3.25" fill="none" stroke="black" stroke-width="0.25"/><line x1="13.29" y1="-10.82" x2="15.29" y2="-10.82" stroke="red" stroke-width="0.15"/><line x1="14.29" y1="-11.82" x2="14.29" y2="-9.82" stroke="red" stroke-width="0.15"/>
+<text x="14.29" y="-4.57" font-size="2.2" text-anchor="middle">THR toggle Ø6.5</text>
+<rect x="-25" y="59.0" width="50" height="5" fill="none" stroke="black" stroke-width="0.2"/><text x="-24" y="62.8" font-size="2.5">Check: this box = 50 × 5 mm printed</text></svg>

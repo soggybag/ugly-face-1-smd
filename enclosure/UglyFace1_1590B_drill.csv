@@ -1,0 +1,6 @@
+Side,Label,X (mm),Y (mm),"Diameter (mm, raw aluminium)"
+A,VOL (16 mm pot),-14.29,36.22,7.5
+A,FRQ (16 mm pot),14.29,36.22,7.5
+A,LED (3 mm),0.0,20.34,3.2
+A,ENV (16 mm pot),-14.29,10.82,7.5
+A,"THR toggle (Taiway 100 mini, ON-OFF-ON)",14.29,10.82,6.5

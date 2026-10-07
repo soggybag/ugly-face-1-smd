@@ -15,6 +15,9 @@ Findings from bench testing (see `Test Sheet.md` for the measurements).
   - ON: RESET biased ~2.5–3 V.
   - Keep C4 coupling the guitar onto RESET in all positions. Keep the bias source impedance in the low kΩ so the C4 high-pass (~24 Hz) stays put.
 - This frees a panel position (e.g. for a dry/blend or a second oscillator control).
+- **4 controls vs UF3's 5 (2026-10-02):** after playing both, UF1's four knobs (ENV, THR, FRQ, VOL) may be the better layout than UF3's five (UF3 adds MIX).
+  - Idea for the next UF1-style revision: keep it at **four controls total**, with THRESHOLD as a **3-position toggle** (GATED / GLITCH / ON) instead of a pot.
+  - That gives three knobs + one toggle: a simpler panel, and the switch matches how THRESHOLD actually behaves.
 
 ## Other v2 items from testing
 
@@ -50,3 +53,24 @@ The user has had 7555s die occasionally in past builds. CMOS inputs are damaged 
 - **Optional over-voltage TVS** across the supply after D1 (e.g. SMAJ15A, or a 15 V zener with the SS14 acting as the series element), mainly for UF1's LM386.
 - **Prefer the TLC555 (TI LinCMOS)** over generic ICM7555 clones; keep the 100n at pin 8 close to the chip (already done).
 - Both boards already have the C11 10n on CONT, decoupling at pin 8, and series reverse-polarity protection.
+
+## v1.2 (2026-10-02): THR toggle, CMOS protection, name on silk, new control layout
+
+v1.1 (received from JLC) is tagged `v1.0` in git.
+
+- **Controls (outside view):** top row **VOL · FRQ**, bottom row **ENV · THR**. These are the same four positions as v1.1 (16 mm pots, same drilling); VOL/FRQ/ENV were swapped into place.
+- **THR is now a mini toggle** (SW1, Taiway 100 SPDT **ON-OFF-ON**, back side, hand-soldered) on the RESET bias node:
+  - centre = **GLITCH**: RV2 is now a **10k trimmer** (Bourns 3362P single-turn cermet, top adjust, hand-soldered, top side; was 3296W multi-turn) in the R4 22k / R5 1k divider. Set it once so the 555 just starts (pin 4 ≈ the chip's reset threshold, ~1.0 V on the bench unit).
+  - one throw = **ON**: adds **R7 2k2** to +9V (bias ≈ 5.5 V; drones, playing cuts holes);
+  - other throw = **GATED**: adds **R8 1k** to GND (bias ≈ 0.25 V; silent until you play).
+  - Which lever direction is ON vs GATED depends on how the toggle is fitted. Label the panel after a quick test.
+- **CMOS protection:**
+  - **R9 22k** between the bias node and U2 pin 4. It limits the current that drove pin 4 to −0.75 V.
+  - **R10 1k** between DISCH and C7, so the output jack no longer connects straight to a 555 pin.
+- **C5 100µ electrolytic → 22µ 1206 X5R** (C12891). Needed for space (the toggle took its spot). Into ENV 1k it's ~16 Hz even with DC-bias derating, so the envelope is unaffected.
+- **Silkscreen:** "UGLY FACE v1.2" and "SUPER-FREQ" on the front. ${Label} texts THR and GLITCH added.
+- U3 pad 2 (vactrol GND) set to no zone connection, to remove a starved-thermal island (it's connected by a track).
+- Re-routed. DRC: 0 errors, 0 unconnected (silkscreen warnings only). ERC: only the pre-existing LM386 gain-pin note. Connectivity identical to the schematic.
+- **Drill:** `enclosure/UglyFace1_1590B_drill.csv` + SVG (Tayda coordinates; footswitch and jacks not included).
+- **JLC files generated 2026-10-02 23:4x** after the user's silkscreen pass: schematic vs board fields 0 mismatches; 24 SMD placements (all top), every LCSC number proven on earlier boards. Fixed while generating: the pots, LED, vactrol, toggle, trimmer and wire pads were still marked "in BOM" (also true in v1.1). Now excluded from BOM and CPL in both schematic and board.
+- Optional items from the list above still open: R3 100k → 10k (DISCH loading), R2 470 → 1k (top end), C6 film/C0G (timing-cap derating), vactrol LED series resistor.
