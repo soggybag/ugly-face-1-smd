@@ -25,3 +25,9 @@
 - `production`/
 
 `production/` holds the files sent to JLCPCB for this revision: UglyFace_01.zip, bom.csv, designators.csv, netlist.ipc, positions.csv.
+
+## Added 2026-10-09 (while building the v1.2 boards)
+
+- `kicad/`: the v1.2 KiCad project files exactly as tagged (schematic, board, footprints), so the as-built design can be opened even after the working copy moves on.
+- `build-docs/`: documents written while building and testing v1.2: `Test Sheet v1.2.md` (bench results), `Debug - Unit 1 hot 555.md` (v1.0 latch-up analysis, retrofit), `Build Notes.md` (incl. the toggle-hole and LDR notes).
+- **Changes after v1.2 in the working copy (not on these boards):** SW1 footprint → plated slots 2.6 × 1.1 mm (Taiway pins/lugs didn't fit the 1.3 mm holes) and a re-route.

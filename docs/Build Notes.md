@@ -74,3 +74,59 @@ v1.1 (received from JLC) is tagged `v1.0` in git.
 - **Drill:** `enclosure/UglyFace1_1590B_drill.csv` + SVG (Tayda coordinates; footswitch and jacks not included).
 - **JLC files generated 2026-10-02 23:4x** after the user's silkscreen pass: schematic vs board fields 0 mismatches; 24 SMD placements (all top), every LCSC number proven on earlier boards. Fixed while generating: the pots, LED, vactrol, toggle, trimmer and wire pads were still marked "in BOM" (also true in v1.1). Now excluded from BOM and CPL in both schematic and board.
 - Optional items from the list above still open: R3 100k → 10k (DISCH loading), R2 470 → 1k (top end), C6 film/C0G (timing-cap derating), vactrol LED series resistor.
+- **Vactrol LED series resistor (2026-10-12): value still open, being A/B tested on built units.**
+  - 100 Ω (in the LED lead) works but changes the envelope response.
+  - 51 Ω was tried on another build.
+  - The user will A/B the two and pick a value. **Next revision:** put it on the board as an 0805 (e.g. R11) in the U3 LED path, alongside the unreleased switch-slot footprint change.
+
+## Choosing the LDR / vactrol (2026-10-09)
+
+**How it's used:** the LDR (U3 pins 3–4) sits across the 555 timing resistance: OSC_SQ → (RV3 portion + R2 470 Ω) → C6 100n. That resistance runs from ~470 Ω (FRQ high) to ~100k (FRQ low).
+- The LED is driven from the LM386 through C5 and ENV (fit 100 Ω in its lead). That gives current pulses of up to ~15–20 mA with the 100 Ω.
+
+**Spec to aim for:**
+
+| Property | Target | Why |
+|---|---|---|
+| Dark resistance | ≥ 1 MΩ (≥ 10 MΩ better) | No pitch shift at rest, even at FRQ low (100k) |
+| Lit resistance at ~10–20 mA | ≤ ~1 kΩ | Can pull the timing resistance well down: big pitch sweeps |
+| Slope (how gradually R follows LED current) | **shallow** (VTL5C9 ≈ 7 vs VTL5C3 ≈ 20) | Pitch follows playing level over a wide range instead of switching; part of the "animation" |
+| Decay | ~50–200 ms (VTL5C9: 50 ms to 100k) | The swoop after each note. Slow parts (VTL5C4, ~1.5 s) give long glides; fast ones are twitchier |
+| LED current rating | ≥ 20 mA continuous | Peaks with ENV at max |
+
+**VTL5C9 (the reference that sounds good):** ~630 Ω at 2 mA, 50 MΩ dark, slope 7.3, 112 dB range, 4 ms on, 50 ms decay to 100k. Its wide dynamic range and shallow slope are why the envelope sounds animated.
+
+**DIY LED + CdS cell:**
+- CdS is most sensitive to green/yellow-green light, so a green or bright white LED couples better than red.
+- The GL55xx family (5516 → 5549) goes from low lit / low dark resistance to high lit / high dark resistance. 5528–5539 are a good middle.
+- Seal the pair light-tight.
+
+**Quick sort of a box of parts:**
+1. Meter on the LDR. Light the LED from 9 V through 8k2 / 1k5 / 470 Ω (~1 / 5 / 15 mA for a red LED) and note R at each.
+2. Then remove the LED current and time roughly how long R takes to pass ~100k.
+3. Compare with a VTL5C9 measured the same way. A similar curve should give a similar feel.
+
+## Build note (2026-10-09): THR toggle pins too big for the holes
+
+**Found while building v1.2:** the Taiway 100 toggle's pins don't fit SW1's holes (1.3 mm round drill).
+
+Caliper measurements:
+
+| Terminal | Measured | Diagonal | Fits a 1.3 mm hole? |
+|---|---|---|---|
+| PCB pins | 1.29 × 0.74 mm | 1.49 mm | no |
+| Solder lugs | 2.22 × 0.71 mm | 2.33 mm | no |
+
+**For this v1.2 build (safest first):**
+1. **Wire it:** mount the toggle in the enclosure and run three short wires from its lugs to SW1's pads. No board damage.
+2. **Narrow the PCB pins:** file the pins' width down until they enter the 1.3 mm holes, then solder normally.
+3. **Last resort, drilling the holes to 1.5 mm:** this cuts away the hole plating that joins the two copper sides. Solder each pin on both sides, and check continuity from each pad's top-side track to its bottom-side track.
+
+**Fixed for the next revision (unreleased, after v1.2):**
+- `UglyFace:SW_Taiway_100_SPDT_PC` now has **plated oval slots 2.6 × 1.1 mm**, pads 3.4 × 2.2 mm (pin 1 still rectangular). The **4.70 mm pitch is unchanged**. It takes either the solder-lug or the PCB-pin version.
+- The slot's long axis runs **across** the row of pins (each blade's wide face toward its neighbour).
+  - **Orientation confirmed by the user on the real switch (2026-10-09).**
+- Board: SW1 updated in place, then re-routed with `_tools/autoroute.py --passes 400`: 25 vias; DRC 0 errors, 0 unconnected; parity clean.
+  - The default 200 passes left R10 → C7 unrouted.
+  - Backup before the change: `autoroute-backups/` (plus the pre-slot board in the session scratchpad).
+- **Same footprint, still with round 1.3 mm holes:** Ugly Face 3 (THR), Rat Energizer (CLIP, OCT) and Harmonic Energizer (CLIP). Each has its own copy of `UglyFace.pretty`. Update them the same way at their next revisions. The **v1.1 boards just received have the small holes too.**

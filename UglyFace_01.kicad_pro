@@ -685,7 +685,7 @@
         "uuid": "e631ee6b-6f1c-4b47-a0b1-e4719e337cba"
       }
     ],
-    "used_designators": "VOL1,OUT1,LG1,LED1,IG1,G1,IN1,FRQ1,ENV1,9V1,OG1,D3,R17,R19",
+    "used_designators": "R17,R19,D3,OG1,9V1,ENV1,FRQ1,IN1,G1,IG1,LED1,LG1,OUT1,VOL1",
     "variants": []
   },
   "sheets": [
