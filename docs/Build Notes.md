@@ -74,6 +74,18 @@ v1.1 (received from JLC) is tagged `v1.0` in git.
 - **Drill:** `enclosure/UglyFace1_1590B_drill.csv` + SVG (Tayda coordinates; footswitch and jacks not included).
 - **JLC files generated 2026-10-02 23:4x** after the user's silkscreen pass: schematic vs board fields 0 mismatches; 24 SMD placements (all top), every LCSC number proven on earlier boards. Fixed while generating: the pots, LED, vactrol, toggle, trimmer and wire pads were still marked "in BOM" (also true in v1.1). Now excluded from BOM and CPL in both schematic and board.
 - Optional items from the list above still open: R3 100k → 10k (DISCH loading), R2 470 → 1k (top end), C6 film/C0G (timing-cap derating), vactrol LED series resistor.
+- **CMOS latch-up: Schottky clamp at pin 4 (2026-10-13): to be bench-tested on an existing board.**
+  - The ICM7555 datasheet limit is **VDD + 0.3 V / GND − 0.3 V** on any pin. Beyond that, the internal protection diodes conduct and can trigger destructive latch-up. It also warns against inputs applied before the supply is up (guitar/amp connected with the pedal unpowered).
+  - **v1.2's R9 22k** limits the current (< ~0.5 mA), which makes latch-up much less likely. But pin 4 still dips to ~−0.6 V on hard picking (the internal diode does the clamping), so it's still outside the rated range.
+  - **Idea:** a **BAT54S** (or BAT43 to GND, plus one to +9V) at the **pin side of R9** (between R9 and U2 pin 4). At R9's small current, a Schottky drops ~0.2–0.25 V, so pin 4 stays inside −0.3 V and the internal diode never conducts. R9 still limits the current. (This replaces the earlier note that put the clamp *before* R9.)
+  - **Both diodes matter (2026-10-13):** in ON mode, the bias (~5.5 V) plus the preamp swing can push pin 4 above +9 V too, so clamp to +9V as well as GND. A BAT54S does both. Retrofit on a built v1.2: two leaded Schottkys (BAT43/BAT85) at R9's pin-4-side pad, one cathode-to-pin-4 with anode to GND, one anode-to-pin-4 with cathode to +9V (pin 8 or its decoupler).
+  - **Test:** fit on an existing board. Scope pin 4 while picking hard in GATED (expect negative peaks at ~−0.25 V instead of ~−0.6 V). Listen for any change in THRESHOLD/gate behaviour, since the DC-restore level shifts slightly. Then decide on the next-revision fix.
+  - **Result, first board (2026-10-13):** two BAT43s fitted (package: Vf 289 mV, IR 0.37 µA), cathode R3 pin 1 (+9V) → anode R9 pin 2; cathode R9 pin 2 → anode GND. Ohms: R9 pin 2–GND 3.9k, +9V–GND 11.9k (no shorts).
+    - Scope at 0.2 V/div, GATED, picking hard: pin 4's bottom flattens at **~−0.2 V** (was ~−0.6 V without the clamp). Inside the −0.3 V rating ✓.
+    - GATED peaks reach ~6 V, so the upper diode is idle there.
+    - **ON position: the tops flatten at ~9 V** (2 V/div), so the upper diode clamps too ✓. That confirms ON really does push pin 4 above the supply without it.
+    - **Listening: little or no audible difference** in any THRESHOLD position ✓.
+    - **Decision: adopt it.** Retrofit the other v1.2 boards the same way. Next revision: a BAT54S (C19726, SOT-23, both diodes) at the pin-4 side of R9, common pin on RESET.
 - **Vactrol LED series resistor (2026-10-12): value still open, being A/B tested on built units.**
   - 100 Ω (in the LED lead) works but changes the envelope response.
   - 51 Ω was tried on another build.
