@@ -86,6 +86,17 @@ v1.1 (received from JLC) is tagged `v1.0` in git.
     - **ON position: the tops flatten at ~9 V** (2 V/div), so the upper diode clamps too ✓. That confirms ON really does push pin 4 above the supply without it.
     - **Listening: little or no audible difference** in any THRESHOLD position ✓.
     - **Decision: adopt it.** Retrofit the other v1.2 boards the same way. Next revision: a BAT54S (C19726, SOT-23, both diodes) at the pin-4 side of R9, common pin on RESET.
+- **Protection summary (v1.2 + retrofit).** The clamp works **with** R9; it doesn't replace it. R9 sets the current and the diodes set the voltage.
+
+  | Part | Protects | How |
+  |---|---|---|
+  | R9 22k | RESET (pin 4) | Limits the current (keep: without it the fuzz stage could push tens of mA through the diodes, and it's part of the THRESHOLD bias) |
+  | BAT43 ×2 (BAT54S next revision) | RESET (pin 4) | Holds the voltage within ~0.2 V of the rails |
+  | R10 1k | DISCH (pin 7) via the output jack | Limits current from outside (cable hot-plug, static, another pedal's output) |
+  | D1 SS14 | Whole board | Reverse-polarity protection |
+
+  The vactrol LED resistor (100 Ω vs 51 Ω, below) is separate: it limits the LM386 → LED current.
+
 - **Vactrol LED series resistor (2026-10-12): value still open, being A/B tested on built units.**
   - 100 Ω (in the LED lead) works but changes the envelope response.
   - 51 Ω was tried on another build.
